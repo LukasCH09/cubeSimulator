@@ -7528,6 +7528,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 725576262}
+  - component: {fileID: 725576264}
+  - component: {fileID: 725576263}
   m_Layer: 0
   m_Name: Leds-CaseCheminee
   m_TagString: Untagged
@@ -7682,6 +7684,32 @@ Transform:
   m_Father: {fileID: 1476014476}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &725576263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 725576261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b520024100960e4bbded506dd1e5c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  port: 6454
+--- !u!114 &725576264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 725576261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f01ccd41a47dfa48912d678f7244e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  segmentLength: 27
+  scale: 0.0171
+  Led: {fileID: 4691625399272852, guid: 7666bc80398ef0b4fa2f2ab9ae9bd0ae, type: 2}
 --- !u!1001 &729839556
 Prefab:
   m_ObjectHideFlags: 0
@@ -9086,6 +9114,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 815035137}
+  - component: {fileID: 815035139}
+  - component: {fileID: 815035138}
   m_Layer: 0
   m_Name: Leds-ToitVitre
   m_TagString: Untagged
@@ -9240,6 +9270,32 @@ Transform:
   m_Father: {fileID: 1476014476}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &815035138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815035136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b520024100960e4bbded506dd1e5c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  port: 6455
+--- !u!114 &815035139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815035136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f01ccd41a47dfa48912d678f7244e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  segmentLength: 27
+  scale: 0.0171
+  Led: {fileID: 4691625399272852, guid: 7666bc80398ef0b4fa2f2ab9ae9bd0ae, type: 2}
 --- !u!1001 &820008105
 Prefab:
   m_ObjectHideFlags: 0
@@ -17059,8 +17115,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1476014476}
-  - component: {fileID: 1476014475}
-  - component: {fileID: 1476014477}
   m_Layer: 0
   m_Name: CubeModel
   m_TagString: Untagged
@@ -17068,18 +17122,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1476014475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1476014474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b520024100960e4bbded506dd1e5c25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  port: 6454
 --- !u!4 &1476014476
 Transform:
   m_ObjectHideFlags: 0
@@ -17098,20 +17140,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 270, y: -90, z: 90}
---- !u!114 &1476014477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1476014474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f01ccd41a47dfa48912d678f7244e57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  segmentLength: 27
-  scale: 0.0171
-  Led: {fileID: 4691625399272852, guid: 7666bc80398ef0b4fa2f2ab9ae9bd0ae, type: 2}
 --- !u!1001 &1476387087
 Prefab:
   m_ObjectHideFlags: 0

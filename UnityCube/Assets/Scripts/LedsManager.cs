@@ -47,14 +47,23 @@ public class LedsManager : MonoBehaviour {
     void Start ()
     {
         // Get all gameobjects with the tag "Segment".
-       GameObject[] segments_objects = GameObject.FindGameObjectsWithTag("Segment");
+        // GameObject[] segments_objects = GameObject.FindGameObjectsWithTag("Segment");
+        Transform[] segments_objects = GetComponentsInChildren<Transform>();
 
         // Order gameobjects segments in 2 dimensionnal array (see documentation).
-        foreach (GameObject segment_object in segments_objects) 
+        foreach (Transform segment_object in segments_objects) 
         {
             // The name of gameObject is used to set the coordinate.
             // => Segment-XX-YY
             string name = segment_object.gameObject.name;
+
+            // Check the format of the name
+            if (name.Length < 13)
+                continue;
+
+            // Check the format of the name
+            if (name.Substring(0, 8) != "Segment-")
+                continue;
 
             // Coordinates
             int x, y;
@@ -63,12 +72,12 @@ public class LedsManager : MonoBehaviour {
             if (int.TryParse(name.Substring(8, 2), out x) && int.TryParse(name.Substring(11, 2), out y))
             {
                 // Store the segment
-                segments_dic.Add(x + "-" + y, segment_object.transform);
+                segments_dic.Add(x + "-" + y, segment_object);
 
                 // Display the value in the editor
                 DebugSegment debug = segment_object.GetComponent<DebugSegment>();
-                debug.setCoordinates(x,y,false);
-            }
+                debug.setCoordinates(x, y, false);
+            }            
         }
 
         // Read json file to get the adress of each led (univers + channel).
